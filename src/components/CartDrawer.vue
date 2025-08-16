@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="rounded-md bg-gray-950/5 px-2.5 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-950/10" @click="open = true">Open drawer</button>
+    <!-- <button class="rounded-md bg-gray-950/5 px-2.5 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-950/10" @click="open = true">Open drawer</button> -->
     <TransitionRoot as="template" :show="modelValue">
       <Dialog class="relative z-10" @close="emitClose">
         <TransitionChild as="template" enter="ease-in-out duration-500" enter-from="opacity-0" enter-to="" leave="ease-in-out duration-500" leave-from="" leave-to="opacity-0">

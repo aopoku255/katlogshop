@@ -50,7 +50,7 @@ const products = [
   <div
     v-for="product in products"
     :key="product.id"
-    class="group relative shadow-md rounded-3xl p-4 flex flex-col justify-between transition-all duration-500"
+    class="group relative shadow-md rounded-3xl p-4 flex flex-col justify-between transition-all duration-300"
   >
     <!-- Image -->
     <div class="overflow-hidden rounded-md">
@@ -91,7 +91,7 @@ const products = [
         <span
           v-for="(badge, index) in product.badges"
           :key="index"
-          class="items-center rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-500 inset-ring inset-ring-gray-400/20"
+          class="items-center rounded-full bg-gray-400/10 px-3 py-1 text-xs font-medium text-gray-500 inset-ring inset-ring-gray-400/20"
         >
           {{ badge }}
         </span>

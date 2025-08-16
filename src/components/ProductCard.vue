@@ -9,7 +9,7 @@ const products = [
   {
     id: 1,
     name: "Fries Cup",
-    href: "#",
+    href: "fries-cup",
     imageSrc: friescup,
     imageAlt: "Front of men's Basic Tee in black.",
     price: "₵35",
@@ -18,7 +18,7 @@ const products = [
   {
     id: 2,
     name: "Paper Bag",
-    href: "#",
+    href: "paper-bag",
     imageSrc: paperbag,
     imageAlt: "Front of men's Basic Tee in white.",
     price: "₵35",
@@ -27,7 +27,7 @@ const products = [
   {
     id: 3,
     name: "Soup Cup",
-    href: "#",
+    href: "soup-cup",
     imageSrc: soupcup,
     imageAlt: "Front of men's Basic Tee in dark gray.",
     price: "₵35",
@@ -36,7 +36,7 @@ const products = [
   {
     id: 4,
     name: "Fries Tray",
-    href: "#",
+    href: "fries-tray",
     imageSrc: friestray,
     imageAlt:
       "Front of men's Artwork Tee in peach with white and brown dots forming an isometric cube.",
@@ -47,10 +47,12 @@ const products = [
 </script>
 
 <template>
-  <div
-    v-for="product in products"
-    :key="product.id"
-    class="group relative shadow-md rounded-3xl p-4 flex flex-col justify-between transition-all duration-300"
+
+  <RouterLink
+  v-for="product in products"
+  :key="product.id"
+  class="group relative shadow-md rounded-3xl p-4 flex flex-col justify-between transition-all duration-300"
+  to="/product/go"
   >
     <!-- Image -->
     <div class="overflow-hidden rounded-md">
@@ -69,7 +71,7 @@ const products = [
         <span>Delivery: 3 - 5 days</span>
       </p>
       <h3 class="text-gray-700 text-xl font-semibold mt-2">
-        <RouterLink :to="product.href">
+        <RouterLink :to="`/product/${product.href}`">
           <span aria-hidden="true" class="absolute inset-0" />
           {{ product.name }}
         </RouterLink>
@@ -97,5 +99,5 @@ const products = [
         </span>
       </div>
     </div>
-  </div>
+  </RouterLink>
 </template>

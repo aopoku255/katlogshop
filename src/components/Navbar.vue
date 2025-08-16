@@ -205,9 +205,11 @@ import {
 } from '@headlessui/vue'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import logo from "@/assets/logo.png";
-import GhanaFlag from '@/assets/icons/GhanaFlag.vue';
 import gh from "@/assets/icons/gh.svg"
 import CartDrawer from './CartDrawer.vue';
+
+import paperbag from "@/assets/img/paperbag.png"
+import soupcup from "@/assets/img/soupcup.png"
 const navigation = {
   categories: [
     {
@@ -217,20 +219,20 @@ const navigation = {
         {
           name: 'New Arrivals',
           href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg',
+          imageSrc: paperbag,
           imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
         },
         {
           name: 'Basic Tees',
           href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg',
+          imageSrc: soupcup,
           imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
         },
       ],
       sections: [
         {
-          id: 'clothing',
-          name: 'Clothing',
+          id: 'cups',
+          name: 'Cups',
           items: [
             { name: 'Tops', href: '#' },
             { name: 'Dresses', href: '#' },
@@ -244,8 +246,8 @@ const navigation = {
           ],
         },
         {
-          id: 'accessories',
-          name: 'Accessories',
+          id: 'paperbags',
+          name: 'Paper Bags',
           items: [
             { name: 'Watches', href: '#' },
             { name: 'Wallets', href: '#' },
